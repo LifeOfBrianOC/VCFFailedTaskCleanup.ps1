@@ -19,8 +19,8 @@ $sddcManagerVCFPassword = "VMw@re1!"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Install PowerVCF if not already installed
-if (!(Get-InstalledModule -Name PowerVCF -ErrorAction SilentlyContinue)) {
-    Install-Module -Name PowerVCF -MinimumVersion 2.1.5
+if (!(Get-InstalledModule -name PowerVCF -MinimumVersion 2.1.5 -ErrorAction SilentlyContinue)) {
+    Install-Module -Name PowerVCF -MinimumVersion 2.1.5 -Force
 }
 
 # Request a VCF Token using PowerVCF
